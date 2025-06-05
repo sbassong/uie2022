@@ -2,6 +2,7 @@
 
 This project is the source code for the UIE 2022 landing page for Jared Spool, a UX expert. The page highlights upcoming events, showcases opportunities to collaborate with Jared, and features an embedded contact form from Airtable. It dynamically displays information for the next upcoming event using data from `calendar.js`. The repository also includes an HTML email template (`email.html`) for the "Leaders of Awesomeness" community.
 
+![uie-page](https://github.com/user-attachments/assets/1a1b0b3a-43c3-4dc0-9048-96770012d2e7)
 ## Installation
 
 To set up and run this project locally:
