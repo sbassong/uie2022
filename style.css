@@ -847,19 +847,66 @@ a {
     box-shadow: 0 0 26px 2px rgba(8, 0, 36, 0.21);
 }
 
+
 /* === Call Form Specific === */
+.call-form {
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: var(--event-spacing-large, 30px); /* Adds space between the text and form halves. */
+}
+
 .call-form .half {
     flex-basis: 50%;
 }
 
+
 .call-form .half h2 {
-    max-width: 360px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 35px;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: var(--event-spacing-medium, 20px);
+    font-family: var(--event-font-heading, "Merriweather", Georgia, serif);
+    font-size: 2.2em;
+    color: var(--event-dark-gray, #333333); 
+    line-height: var(--event-line-height-heading, 1.3);
 }
 
-.call-form p {
-    max-width: 450px;
+.call-form .half p {
+    max-width: 100%; 
+    font-family: var(--event-font-primary, "Lato", Arial, Helvetica, sans-serif);
+    font-size: 1.05em;
+    line-height: var(--event-line-height-text, 1.7); 
+    color: var(--event-medium-gray, #666666); 
+    margin-bottom: var(--event-spacing-medium, 15px);
+}
+
+.call-form .half p:last-of-type {
+    margin-bottom: 0; /* Removes bottom margin from the last paragraph in a half. */
+}
+
+/* Responsive adjustments for the call-form */
+@media (max-width: 800px) {
+    .call-form {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .call-form .half {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .call-form .half:first-child { /* Text content half when stacked. */
+        margin-bottom: var(--event-spacing-large, 30px);
+        text-align: center;
+    }
+
+    .call-form .half h2 {
+        font-size: 2em;
+    }
+
+    .call-form .half p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+    }
 }
